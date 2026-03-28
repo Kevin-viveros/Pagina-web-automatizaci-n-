@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoVentas AI | Sistema de Ventas Automáticas 24/7</title>
+  <meta name="description" content="Convierte tus redes sociales en una máquina automática de ventas. Sistema IA que trabaja 24/7 para captar clientes mientras tú duermes." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════ CANVAS BACKGROUND ══════════════ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-dot"></span>
+        <span>AutoVentas AI</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#cta" class="nav-cta">Empezar →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#cta" class="nav-cta">Empezar →</a>
+  </div>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-blur-orb orb-1"></div>
+    <div class="hero-blur-orb orb-2"></div>
+
+    <div class="hero-content">
+      <div class="badge" data-aos="fade-down">
+        <span class="badge-dot"></span>
+        Sistema activo · Captando clientes ahora
+      </div>
+
+      <h1 data-aos="fade-up" data-aos-delay="100">
+        Tu negocio vende<br />
+        <span class="gradient-text">24 horas al día</span><br />
+        sin que estés presente
+      </h1>
+
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+        Convertimos tus redes sociales en un sistema automático de ventas
+        impulsado por IA. Más clientes, menos esfuerzo, resultados reales.
+      </p>
+
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+        <button class="btn-primary" id="btn-hero" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+          <span>Quiero automatizar mis ventas</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="social-proof">
+          <div class="avatars">
+            <img src="https://i.pravatar.cc/40?img=1" alt="Cliente 1" />
+            <img src="https://i.pravatar.cc/40?img=2" alt="Cliente 2" />
+            <img src="https://i.pravatar.cc/40?img=3" alt="Cliente 3" />
+            <img src="https://i.pravatar.cc/40?img=4" alt="Cliente 4" />
+          </div>
+          <span>+200 negocios automatizados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-aos="zoom-in" data-aos-delay="400">
+      <div class="visual-glow"></div>
+      <img src="images/hero_visual.png" alt="Dashboard de ventas automáticas" class="hero-img" />
+      <div class="metric-chip chip-1">
+        <span class="chip-icon">📈</span>
+        <div>
+          <div class="chip-val">+347%</div>
+          <div class="chip-label">Engagement</div>
+        </div>
+      </div>
+      <div class="metric-chip chip-2">
+        <span class="chip-icon">🤖</span>
+        <div>
+          <div class="chip-val">IA activa</div>
+          <div class="chip-label">Publicando ahora</div>
+        </div>
+      </div>
+      <div class="metric-chip chip-3">
+        <span class="chip-icon">💰</span>
+        <div>
+          <div class="chip-val">24/7</div>
+          <div class="chip-label">Sin parar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ LOGOS / PLATFORMS ══════════════ -->
+  <div class="platforms">
+    <p class="platforms-label">Compatible con tus plataformas</p>
+    <div class="logos-track">
+      <div class="logos-inner">
+        <span class="plat-badge">Instagram</span>
+        <span class="plat-badge">Facebook</span>
+        <span class="plat-badge">TikTok</span>
+        <span class="plat-badge">YouTube</span>
+        <span class="plat-badge">WhatsApp</span>
+        <span class="plat-badge">LinkedIn</span>
+        <span class="plat-badge">Telegram</span>
+        <span class="plat-badge">X / Twitter</span>
+        <!-- repeat for seamless scroll -->
+        <span class="plat-badge">Instagram</span>
+        <span class="plat-badge">Facebook</span>
+        <span class="plat-badge">TikTok</span>
+        <span class="plat-badge">YouTube</span>
+        <span class="plat-badge">WhatsApp</span>
+        <span class="plat-badge">LinkedIn</span>
+        <span class="plat-badge">Telegram</span>
+        <span class="plat-badge">X / Twitter</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ PROBLEM / SOLUTION ══════════════ -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="problem-grid">
+        <div class="problem-col" data-aos="fade-right">
+          <div class="col-label col-label--red">Sin el sistema</div>
+          <ul class="problem-list">
+            <li class="problem-item bad">
+              <span class="pi-icon">✗</span>
+              Pierdes horas creando contenido sin resultados
+            </li>
+            <li class="problem-item bad">
+              <span class="pi-icon">✗</span>
+              Publicación inconsistente, algoritmo te penaliza
+            </li>
+            <li class="problem-item bad">
+              <span class="pi-icon">✗</span>
+              Leads que llegan y no cierran solos
+            </li>
+            <li class="problem-item bad">
+              <span class="pi-icon">✗</span>
+              Dependes de ti para cada venta
+            </li>
+            <li class="problem-item bad">
+              <span class="pi-icon">✗</span>
+              Burnout y resultados mediocres
+            </li>
+          </ul>
+        </div>
+        <div class="problem-divider">
+          <div class="divider-line"></div>
+          <div class="divider-vs">VS</div>
+          <div class="divider-line"></div>
+        </div>
+        <div class="problem-col" data-aos="fade-left">
+          <div class="col-label col-label--cyan">Con AutoVentas AI</div>
+          <ul class="problem-list">
+            <li class="problem-item good">
+              <span class="pi-icon">✓</span>
+              Contenido generado por IA, publicado automáticamente
+            </li>
+            <li class="problem-item good">
+              <span class="pi-icon">✓</span>
+              Presencia constante que activa el algoritmo
+            </li>
+            <li class="problem-item good">
+              <span class="pi-icon">✓</span>
+              Seguimiento automático hasta el cierre
+            </li>
+            <li class="problem-item good">
+              <span class="pi-icon">✓</span>
+              Sistema que vende mientras duermes
+            </li>
+            <li class="problem-item good">
+              <span class="pi-icon">✓</span>
+              Escala sin aumentar tu carga de trabajo
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES ══════════════ -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Servicios</div>
+        <h2>Todo lo que tu sistema<br /><span class="gradient-text">hace por ti</span></h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">⚡</div>
+              <h3>Automatización Total</h3>
+              <p>Publicamos por ti todos los días sin excepción</p>
+            </div>
+            <div class="card-back">
+              <h3>Automatización Total</h3>
+              <p>Programamos y publicamos contenido en todas tus redes de forma automática, manteniendo una presencia constante que el algoritmo premia.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="80">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🤖</div>
+              <h3>Contenido IA</h3>
+              <p>Scripts, posts y videos generados con inteligencia artificial</p>
+            </div>
+            <div class="card-back">
+              <h3>Contenido IA</h3>
+              <p>Nuestra IA analiza tu nicho, tu audiencia y las tendencias para crear contenido que conecta, engancha y convierte.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="160">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🕐</div>
+              <h3>Sistema 24/7</h3>
+              <p>Tu negocio nunca para, trabaja mientras duermes</p>
+            </div>
+            <div class="card-back">
+              <h3>Sistema 24/7</h3>
+              <p>Bots de respuesta, secuencias de seguimiento y publicación continua. Tu embudo de ventas opera las 24 horas, los 7 días de la semana.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="240">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">💬</div>
+              <h3>Engagement Activo</h3>
+              <p>Interacción automática que multiplica tu alcance</p>
+            </div>
+            <div class="card-back">
+              <h3>Engagement Activo</h3>
+              <p>Respuestas automáticas, comentarios estratégicos y DMs personalizados que crean conversaciones reales que terminan en ventas.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="320">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🎯</div>
+              <h3>Estrategia de Ventas</h3>
+              <p>Contenido diseñado específicamente para vender</p>
+            </div>
+            <div class="card-back">
+              <h3>Estrategia de Ventas</h3>
+              <p>Cada post, reel y story sigue una estructura de copywriting probada. No solo creas contenido, creas una máquina de conversión.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🔗</div>
+              <h3>Integración Total</h3>
+              <p>Se conecta con tus herramientas actuales sin fricción</p>
+            </div>
+            <div class="card-back">
+              <h3>Integración Total</h3>
+              <p>CRM, WhatsApp Business, email marketing, Shopify, y más. Todo conectado en un ecosistema que funciona solo.</p>
+              <span class="card-back-cta">Más info →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats-section" id="resultados">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Resultados</div>
+        <h2>Números que <span class="gradient-text">hablan solos</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="stat-number" data-target="347">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Aumento promedio en engagement</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-number" data-target="200">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Negocios automatizados</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-suffix">/7</div>
+          <div class="stat-label">Horas activo sin descanso</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-number" data-target="90">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Clientes reportan más ventas en 30 días</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROCESS ══════════════ -->
+  <section class="process-section" id="proceso">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Proceso</div>
+        <h2>En marcha en <span class="gradient-text">72 horas</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="step" data-aos="fade-right" data-aos-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Diagnóstico gratuito</h3>
+            <p>Analizamos tu negocio, tu audiencia y tus redes para diseñar tu sistema personalizado.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-aos="fade-right" data-aos-delay="100">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Configuración del sistema</h3>
+            <p>Instalamos la IA, los bots y las secuencias de automatización en menos de 72 horas.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-aos="fade-right" data-aos-delay="200">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Lanzamiento y ventas</h3>
+            <p>El sistema empieza a publicar, interactuar y cerrar ventas. Tú solo revisas los resultados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TESTIMONIALS ══════════════ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Testimonios</div>
+        <h2>Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="0">
+          <div class="stars">★★★★★</div>
+          <p>"En 3 semanas tripliqué mis consultas. El sistema publicó 21 días seguidos sin que yo tocara nada. Increíble."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=5" alt="María G." />
+            <div>
+              <strong>María G.</strong>
+              <span>Coaching de bienestar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars">★★★★★</div>
+          <p>"Pasé de publicar 1 vez por semana a tener contenido diario. Mis ventas subieron un 280% en el primer mes."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=8" alt="Carlos R." />
+            <div>
+              <strong>Carlos R.</strong>
+              <span>E-commerce de moda</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars">★★★★★</div>
+          <p>"El mejor dinero que he invertido en mi negocio. Ahora tengo leads entrando 24/7 y solo cierro los que me interesan."</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=12" alt="Laura M." />
+            <div>
+              <strong>Laura M.</strong>
+              <span>Consultora financiera</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA FINAL ══════════════ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-orb"></div>
+    <div class="container">
+      <div class="cta-box" data-aos="zoom-in">
+        <div class="cta-badge">Plazas limitadas este mes</div>
+        <h2>¿Listo para que tu negocio<br /><span class="gradient-text">venda sin ti?</span></h2>
+        <p>Agenda una llamada de diagnóstico gratuita. Sin compromiso, sin presión. Solo resultados.</p>
+        <div class="cta-actions">
+          <button class="btn-primary btn-xl" id="btn-cta">
+            <span>Quiero mi sistema ahora</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <span class="cta-note">🔒 100% gratuito · Sin tarjeta requerida</span>
+        </div>
+        <div class="cta-guarantees">
+          <div class="guarantee"><span>✅</span> Resultados en 30 días</div>
+          <div class="guarantee"><span>✅</span> Soporte incluido</div>
+          <div class="guarantee"><span>✅</span> Sin contratos eternos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-dot"></span>
+            <span>AutoVentas AI</span>
+          </div>
+          <p>Sistema de Ventas Automáticas 24/7<br />impulsado por Inteligencia Artificial.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#cta">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AutoVentas AI · Sistema de Ventas Automáticas 24/7</span>
+        <span>Hecho con IA · Para negocios que no se detienen</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
